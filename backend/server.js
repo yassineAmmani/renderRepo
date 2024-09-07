@@ -11,7 +11,7 @@ const app = express();
 
 // Configure CORS to allow requests from your frontend domain
 const corsOptions = {
-  origin: 'https://render-front-five.vercel.app/',
+  origin: 'https://render-front-five.vercel.app',
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   allowedHeaders: ['Content-Type', 'Authorization']
 };

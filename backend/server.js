@@ -9,7 +9,14 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
+// Configure CORS to allow requests from your frontend domain
+const corsOptions = {
+  origin: 'https://render-front-152cmjir0-yassine-ammanis-projects.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 
 mongoose.connect(process.env.MONGODB_URI, {
